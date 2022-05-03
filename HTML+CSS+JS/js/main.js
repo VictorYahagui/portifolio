@@ -1,7 +1,6 @@
 const btnContact = document.querySelector('.vy-btn-contact');
 const toggleModal = document.querySelectorAll('.vy-toggle-modal');
 const toggleMenu = document.querySelectorAll('.vy-toggle-menu');
-const overlay = document.querySelector('.vy-overlay');
 const menuMobile = document.querySelector('.vy-menu-mob');
 
 
@@ -24,8 +23,10 @@ btnContact.addEventListener('click', function(){
 //trocar icone do menu mobile
 
 const replaceIcon = function (icon) {
-    if(menuCloseMob){
-
+    if(icon.attributes.name.value === 'menu-outline'){
+        icon.setAttribute ('name', 'close-outline');
+    } else {
+        icon.setAttribute ('name', 'menu-outline');
     }
 }
 
@@ -33,12 +34,12 @@ const replaceIcon = function (icon) {
 
 for(let j = 0; j < toggleMenu.length; j++){
     toggleMenu[j].addEventListener('click', function(){
+        let menuCloseMob = document.querySelector('.vy-icon-close-menu-mob');
+        let overlay = document.querySelector('.vy-menu-overlay');
         menuMobile.classList.toggle('vy-menu-is-closed');
         overlay.classList.toggle('vy-is-opened');
-        let menuCloseMob = document.querySelector('.vy-icon-close-menu-mob').attributes.name;
         replaceIcon(menuCloseMob);
-        menuMobile.classList.toggle('vy-menu-is-open');
-        
+        menuMobile.classList.toggle('vy-menu-is-open');        
     });
 }
 
@@ -46,6 +47,7 @@ for(let j = 0; j < toggleMenu.length; j++){
 
 for(let i = 0; i < toggleModal.length; i++){
     toggleModal[i].addEventListener('click', function(){
+        let overlay = document.querySelector('.vy-overlay');
         let modalOrcamento = document.querySelector('#vy-modal-orcamento');
         overlay.classList.toggle('vy-is-opened');
         modalOrcamento.classList.toggle('vy-is-opened');

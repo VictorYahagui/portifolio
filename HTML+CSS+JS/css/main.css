@@ -140,7 +140,7 @@ p, label, textarea{
     .vy-inner-load{
         margin-top: -40px;
     }
-    .vy-overlay{
+    .vy-overlay, .vy-menu-overlay{
         width: 100%;
         height: 100vh;
         display: none;
@@ -258,6 +258,7 @@ p, label, textarea{
         top: 0;
         z-index: 1200;
         padding: 100px 30px 30px;
+        transition: all 1s ease-out;
     }
     .vy-menu-is-open{
         right: 0;
@@ -790,7 +791,7 @@ p, label, textarea{
 }
 
 @media screen and (min-width: 992px){
-    .vy-menu-mob{
+    .vy-menu-mob, .vy-btn-menu-mob {
         display: none;
     }
     .vy-menu{
