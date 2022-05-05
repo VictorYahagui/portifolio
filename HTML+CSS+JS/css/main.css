@@ -250,7 +250,7 @@ p, label, textarea{
         display: none;
     }
     .vy-menu-mob{
-        width: 240px;
+        width: 200px;
         height: 100vh;
         display: block;
         background-color: var(--eletricindigo);
@@ -547,9 +547,10 @@ p, label, textarea{
     }
 
     .vy-slider-list .vy-portfolio-item-info{
-        width: calc(100% - 75px);
+        width: 100%;
         display: table;
-        margin: 73px 0 0 13px;
+        margin-top: 73px;
+        position: relative;
         transform: scaleX(0);
         transform-origin: right;
     }
@@ -558,9 +559,13 @@ p, label, textarea{
     }
     .vy-porftolio-list .vy-portfolio-item-info{
         width: calc(100% - 105px);
-    
     }
-
+    .vy-slider-list .vy-portfolio-item-info p {
+        text-align: center;
+    }
+    .vy-slider-list .vy-portfolio-item-info button {
+        margin: 0 auto;
+    }
     .vy-slider-list .vy-portfolio-item-thumb,
     .vy-porftolio-list .vy-portfolio-item-thumb{
         width: 100%;
@@ -615,24 +620,29 @@ p, label, textarea{
         margin-top: 130px;
     }
 
-    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) .vy-portfolio-item-info {
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-info {
         text-align: right;
         margin-top: 66px;
     }
-    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) .vy-portfolio-item-info button{
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-info button{
         float: right;
     }
-    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-info {
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-info {
         margin-left: 105px;
     }
     .vy-porftolio-list .vy-portfolio-item:nth-child(even) > .row{
         flex-direction: row-reverse;  
     }
-    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-thumb button{
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-thumb button{
         float: left;
         margin-left: 59px;
     }
-    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-thumb img{
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-thumb img{
         left: 59px;
     }
     /* Sobre */
@@ -795,8 +805,10 @@ p, label, textarea{
     }
     /* Ultilitarias */
     .vy-title-xlarge {
-        font-size: 50px;
+        font-size: 45px;
+        text-align: center;
     }
+
 }
 @media screen and (min-width: 576px){
     
@@ -853,19 +865,73 @@ p, label, textarea{
     .vy-menu a:hover::before{
         width: 100%;
     }
-    .vy-title-xlarge {
-        font-size: 64px;
-    }
     .vy-home{
         background-size: auto;
     }
     .vy-home h1{
         margin-top: 0;
     }
-}
-
-@media screen and (min-width: 1200px){
+    .vy-slider-list .vy-portfolio-item-thumb{
+        padding: 30px 0 19px 0;
+        margin-top: 52px;
+    }
+    .vy-slider-list .vy-portfolio-item-thumb img{
+        width: 120%;
+        max-width: 120%;
+        left: -100px;
+    }
+    .vy-slider-list .vy-portfolio-item-thumb > button{
+        margin-right: 28px;
+    }
+    .vy-nav-counter span{
+        font-size: 80px;
+    }
+    .vy-nav-counter:before{
+        width: 24px;
+    }
+    .vy-portfolio-nav{
+        position: absolute;
+        left: 0;
+        top: 25vh;
+    }
+    .vy-title-xlarge {
+        font-size: 50px;
+        text-align: left;
+    }
+    .vy-slider-list .vy-portfolio-item-info p {
+        text-align: left;
+    }
+    .vy-slider-list .vy-portfolio-item-info button {
+        margin: 0;
+    }
+    .vy-slider-list .vy-portfolio-item-info{
+        width: calc(100% - 75px);
+        margin-left: 13px;
+    }
     
+}
+@media screen and (min-width: 1200px){
+    .vy-title-xlarge {
+        font-size: 64px;
+    }
+    .vy-slider-list .vy-portfolio-item-thumb{
+        padding: 75px 0 19px 0;
+        margin-top: -4px;
+    }
+    .vy-slider-list .vy-portfolio-item-thumb img{
+        width: 100%;
+        max-width: 100%;
+        left: -60px;
+    }
+    .vy-slider-list .vy-portfolio-item-thumb > button{
+        margin-right: 59px;
+    }
+    .vy-nav-counter span{
+        font-size: 110px;
+    }
+    .vy-nav-counter:before{
+        width: 32px;
+    }
 }
 
 @media screen and (min-width: 1364px){
