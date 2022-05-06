@@ -573,12 +573,15 @@ p, label, textarea{
         padding: 75px 0 19px 0;
         position: relative;
     }
-    .vy-slider-list .vy-portfolio-item-thumb > button,
+    .vy-slider-list .vy-portfolio-item-thumb > button{
+        margin: 17px auto 0 auto;
+        float: none;
+    }
     .vy-porftolio-list .vy-portfolio-item-thumb > button{
-        margin-top: 17px;
-        margin-right: 59px;
+        margin: 17px 59px 0 0;
         float: right;
     }
+
     .vy-slider-list .vy-portfolio-item-box{
         width: 100%;
         height: 100%;
@@ -601,11 +604,11 @@ p, label, textarea{
     }
 
     .vy-slider-list .vy-portfolio-item-thumb img{
-        width: 100%;
+        width: 90%;
         max-width: 100%;
         height: auto;
         position: relative;
-        left: -60px;
+        left: 5%;
         transform: scale(0);
     }
     .vy-porftolio-list .vy-portfolio-item-thumb img{
@@ -872,7 +875,7 @@ p, label, textarea{
         margin-top: 0;
     }
     .vy-slider-list .vy-portfolio-item-thumb{
-        padding: 30px 0 19px 0;
+        padding: 35px 13px 19px 0;
         margin-top: 52px;
     }
     .vy-slider-list .vy-portfolio-item-thumb img{
@@ -881,8 +884,10 @@ p, label, textarea{
         left: -100px;
     }
     .vy-slider-list .vy-portfolio-item-thumb > button{
-        margin-right: 28px;
+        margin: 17px 2.7vh 0 auto;
+        float: right;
     }
+    
     .vy-nav-counter span{
         font-size: 80px;
     }
