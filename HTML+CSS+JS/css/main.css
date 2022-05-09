@@ -439,12 +439,13 @@ p, label, textarea{
     }
     /*Portfolio*/
     .vy-portfolio-nav{
-        width: 145px;
-        height: 400px;
+        width: 60%;
+        height: auto;
         display: table;
         position: absolute;
-        left: 0;
-        top: 26vh;
+        left: 30px;
+        bottom: -50em;
+
     }
     .vy-nav-counter{
         width: 100%;
@@ -496,7 +497,7 @@ p, label, textarea{
         width: 100%;
         height: 45px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         background-color: var(--raiseblack);
         border-radius: 23px;
@@ -529,18 +530,18 @@ p, label, textarea{
     .vy-slider-container{
         display: block;
         overflow: hidden;
+        padding-bottom: 120px;
     }
     .vy-slider-list{
         width: auto;
-        height: 700px;
         display: block;
         list-style: none;
     }
     .vy-slider-list .vy-portfolio-item{
         display: block;
-        height: 500px;
+        height: auto;
         float: left;
-        margin-top: calc(26vh - 75px);
+        margin-top: 0;
     }
     .vy-porftolio-list .vy-portfolio-item {
         margin-bottom: 100px;
@@ -549,7 +550,7 @@ p, label, textarea{
     .vy-slider-list .vy-portfolio-item-info{
         width: 100%;
         display: table;
-        margin-top: 73px;
+        margin-top: 15px;
         position: relative;
         transform: scaleX(0);
         transform-origin: right;
@@ -566,7 +567,12 @@ p, label, textarea{
     .vy-slider-list .vy-portfolio-item-info button {
         margin: 0 auto;
     }
-    .vy-slider-list .vy-portfolio-item-thumb,
+    .vy-slider-list .vy-portfolio-item-thumb{
+        width: 100%;
+        display: table;
+        padding: 30px 0 19px 0;
+        position: relative;
+    }
     .vy-porftolio-list .vy-portfolio-item-thumb{
         width: 100%;
         display: table;
@@ -811,6 +817,9 @@ p, label, textarea{
         font-size: 45px;
         text-align: center;
     }
+    .vy-full-height{
+        height: auto;
+    }
 
 }
 @media screen and (min-width: 576px){
@@ -874,6 +883,12 @@ p, label, textarea{
     .vy-home h1{
         margin-top: 0;
     }
+    .vy-portfolio-nav{
+        width: 145px;
+        height: 400px;
+        top: 125vh;
+    }
+
     .vy-slider-list .vy-portfolio-item-thumb{
         padding: 35px 13px 19px 0;
         margin-top: 52px;
@@ -894,14 +909,15 @@ p, label, textarea{
     .vy-nav-counter:before{
         width: 24px;
     }
-    .vy-portfolio-nav{
-        position: absolute;
-        left: 0;
-        top: 25vh;
-    }
     .vy-title-xlarge {
         font-size: 50px;
         text-align: left;
+    }
+    .vy-slider-list .vy-portfolio-item{
+        display: block;
+        height: 500px;
+        float: left;
+        margin-top: calc(26vh - 75px);
     }
     .vy-slider-list .vy-portfolio-item-info p {
         text-align: left;
@@ -912,8 +928,10 @@ p, label, textarea{
     .vy-slider-list .vy-portfolio-item-info{
         width: calc(100% - 75px);
         margin-left: 13px;
+    }    
+    .vy-slider-list .vy-portfolio-item-info{
+        margin-top: 73px;
     }
-    
 }
 @media screen and (min-width: 1200px){
     .vy-title-xlarge {
@@ -936,6 +954,11 @@ p, label, textarea{
     }
     .vy-nav-counter:before{
         width: 32px;
+    }
+    /*ultilit*/
+
+    .vy-full-height{
+        height: 100vh;
     }
 }
 
@@ -1113,10 +1136,6 @@ p, label, textarea{
 }
 .vy-padd-bottom-30{
     padding-bottom: 30px;
-}
-.vy-full-height{
-    height: 100vh;
-    position: relative;
 }
 .vy-first-section{
     height: calc(100vh - 30px);
