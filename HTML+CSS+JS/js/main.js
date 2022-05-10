@@ -60,9 +60,8 @@ for(let i = 0; i < toggleModal.length; i++){
 
 var waypoint = new Waypoint({
     element: document.querySelector('.vy-scrolling'),
-    handler: function(direction) {
+    handler: function() {
     document.querySelector('.vy-scrolling').classList.toggle('vy-fade-out-scroll')
     },
     offset: '80%'
 });
-

@@ -7,7 +7,8 @@ const btnNext = document.querySelector('.vy-item-next');
 const btnPrev = document.querySelector('.vy-item-prev');
 const currentSlide = document.querySelector('.vy-current-slide');
 const totalSlide = document.querySelector('.vy-total-slide');
-const skeletonLoading = document.querySelector('.vy-skeleton-loading')
+const skeletonLoading = document.querySelector('.vy-skeleton-loading');
+const galleryItem = document.querySelectorAll('.vy-post-gallery img');
 
 const counterFormater = function (number) {
     if (number < 10) {
@@ -15,6 +16,16 @@ const counterFormater = function (number) {
     } else {
         return number;
     }
+}
+
+for (let i = 0; i < galleryItem.length; i++) {
+    new Waypoint.Inview({
+        element: galleryItem[i],
+        entered: function () {
+            let fullImage = this.element.getAttribute('data-src');
+            this.element.setAttribute('src', fullImage);
+        }
+    })
 }
 
 totalSlide.innerHTML = counterFormater(galleryImages.length);
@@ -27,7 +38,7 @@ const skeletonAnim = function (img) {
         setTimeout(function () {
             skeletonLoading.style.display = 'none';
         }, 2200);
-       
+
     });
 }
 
@@ -75,6 +86,7 @@ const nextItem = function () {
         }
     }
 }
+
 const prevItem = function () {
 
     const currentItemNum = frameImage.getAttribute('data-index');

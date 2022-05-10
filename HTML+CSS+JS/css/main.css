@@ -144,7 +144,7 @@ p, label, textarea{
         width: 100%;
         height: 100vh;
         display: none;
-        position: fixed;
+        position: absolute;
         z-index: 1000;
         top: 0;
         left: 0;  
@@ -152,14 +152,14 @@ p, label, textarea{
         animation: bg-fade 1s ease forwards;
     }
     .vy-modal{
-        width: 800px;
+        width: 90%;
         display: none;
         padding: 30px;
         border-radius: 0 20px 20px 20px;
         position: fixed;
         top: -100%;
-        left: 0;
-        right: 0;
+        left: 5%;
+        right: 5%;
         margin: 0 auto;
         z-index: 1200;
     }
@@ -168,7 +168,6 @@ p, label, textarea{
         display: table;
         position: relative;
     }
-    
     .vy-form input:focus+label,
     .vy-form input:not(:placeholder-shown)+label{
         transform: translateY(-62px);
@@ -178,8 +177,8 @@ p, label, textarea{
         transform: translateY(-140px);   
     }
     .vy-form label{
-        margin-bottom: 15px;
-        font-size: 16px;
+        margin-bottom: 3px;
+        font-size: 14px;
         display: inline-block;
         padding: 0 0 0 15px;
         transform: translateY(-33px);
@@ -444,8 +443,7 @@ p, label, textarea{
         display: table;
         position: absolute;
         left: 30px;
-        bottom: -50em;
-
+        bottom: -51em;
     }
     .vy-nav-counter{
         width: 100%;
@@ -544,7 +542,7 @@ p, label, textarea{
         margin-top: 0;
     }
     .vy-porftolio-list .vy-portfolio-item {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .vy-slider-list .vy-portfolio-item-info{
@@ -584,8 +582,8 @@ p, label, textarea{
         float: none;
     }
     .vy-porftolio-list .vy-portfolio-item-thumb > button{
-        margin: 17px 59px 0 0;
-        float: right;
+        margin: 17px auto 0 auto;
+        float: none;
     }
 
     .vy-slider-list .vy-portfolio-item-box{
@@ -622,37 +620,33 @@ p, label, textarea{
         max-width: 100%;
         height: auto;
         position: relative;
-        left: -60px;
     }
     /* Portfolio */
     .vy-section-offset-top{
         margin-top: 130px;
     }
 
-    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
-    .vy-portfolio-item-info {
-        text-align: right;
-        margin-top: 66px;
+    .vy-porftolio-list .vy-portfolio-item .vy-portfolio-item-info {
+        width: 100%;
     }
     .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-info button, .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
     .vy-portfolio-item-info button{
-        float: right;
+        float: none;
+        margin: 0 auto;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-info p, .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-info p{
+        text-align: center;
     }
     .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
     .vy-portfolio-item-info {
-        margin-left: 105px;
+        width: 100%;
+        margin-left: 0;
     }
     .vy-porftolio-list .vy-portfolio-item:nth-child(even) > .row{
         flex-direction: row-reverse;  
-    }
-    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
-    .vy-portfolio-item-thumb button{
-        float: left;
-        margin-left: 59px;
-    }
-    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
-    .vy-portfolio-item-thumb img{
-        left: 59px;
     }
     /* Sobre */
     .vy-avatar-sobre img{
@@ -822,20 +816,102 @@ p, label, textarea{
     }
 
 }
+@media screen and (min-width: 320px){
+    .vy-portfolio-nav{
+        bottom: -55em;
+    }
+}
+@media screen and (min-width: 350px){
+    .vy-portfolio-nav{
+        bottom: -52em;
+    }
+}
+@media screen and (min-width: 400px){
+    .vy-portfolio-nav{
+        bottom: -53em;
+    }
+}
+@media screen and (min-width: 450px){
+    .vy-portfolio-nav{
+        bottom: -54em;
+    }
+}
+@media screen and (min-width: 480px){
+    .vy-portfolio-nav{
+        bottom: -54em;
+    }
+}
+@media screen and (min-width: 500px){
+    .vy-portfolio-nav{
+        bottom: -55em;
+    }
+}
+@media screen and (min-width: 535px){
+    .vy-portfolio-nav{
+        bottom: -53em;
+    }
+}
 @media screen and (min-width: 576px){
-    
+    .vy-portfolio-nav{
+        bottom: -53em;
+    }
+}
+@media screen and (min-width: 600px){
+    .vy-portfolio-nav{
+        bottom: -54em;
+    }
+}
+@media screen and (min-width: 625px){
+    .vy-portfolio-nav{
+        bottom: -55em;
+    }
+}
+@media screen and (min-width: 650px){
+    .vy-portfolio-nav{
+        bottom: -57em;
+    }
 }
 @media screen and (min-width: 700px){
     .vy-home{
         background-size: 100% auto;
+    }
+    .vy-portfolio-nav{
+        bottom: -58em;
+    }
+}
+@media screen and (min-width: 730px){
+    .vy-portfolio-nav{
+        bottom: -60em;
     }
 }
 @media screen and (min-width: 768px){
     .vy-home{
         background-size: 80% auto;
     }
+    .vy-portfolio-nav{
+        bottom: -61em;
+    }
 }
-
+@media screen and (min-width: 800px){
+    .vy-portfolio-nav{
+        bottom: -61em;
+    }
+}
+@media screen and (min-width: 850px){
+    .vy-portfolio-nav{
+        bottom: -63em;
+    }
+}
+@media screen and (min-width: 900px){
+    .vy-portfolio-nav{
+        bottom: -64em;
+    }
+}
+@media screen and (min-width: 950px){
+    .vy-portfolio-nav{
+        bottom: -65em;
+    }
+}
 @media screen and (min-width: 992px){
     .vy-menu-mob, .vy-btn-menu-mob {
         display: none;
@@ -919,6 +995,9 @@ p, label, textarea{
         float: left;
         margin-top: calc(26vh - 75px);
     }
+    .vy-porftolio-list .vy-portfolio-item {
+        margin-bottom: 100px;
+    }
     .vy-slider-list .vy-portfolio-item-info p {
         text-align: left;
     }
@@ -926,14 +1005,68 @@ p, label, textarea{
         margin: 0;
     }
     .vy-slider-list .vy-portfolio-item-info{
-        width: calc(100% - 75px);
+        width: 100%;
         margin-left: 13px;
     }    
     .vy-slider-list .vy-portfolio-item-info{
         margin-top: 73px;
     }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-info {
+        text-align: right;
+        margin-top: 66px;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-info h1, .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-info p{
+        text-align: right;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-info button{
+        float: right;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-thumb button{
+        float: right;
+        margin-right: 59px;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) 
+    .vy-portfolio-item-thumb img{
+        left: -60px;
+    }
+    
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-thumb img{
+        left: 60px;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-info {
+        width: 90%;
+    }
+    
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-info button{
+        float: left;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-thumb button{
+        float: left;
+        margin-left: 59px;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-info h1, .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-info p{
+        text-align: left;
+    }
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) 
+    .vy-portfolio-item-info {
+        margin-left: 65px;
+    }
 }
 @media screen and (min-width: 1200px){
+    .vy-modal{
+        width: 800px;
+    }
     .vy-title-xlarge {
         font-size: 64px;
     }
@@ -961,7 +1094,6 @@ p, label, textarea{
         height: 100vh;
     }
 }
-
 @media screen and (min-width: 1364px){
     
 }
