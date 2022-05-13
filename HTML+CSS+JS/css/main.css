@@ -655,7 +655,6 @@ p, label, textarea{
     }
     /* Detalhes */
     .vy-hero{
-        height: 500px;
         background: url('../pages/Portfolio/img/hero.png') no-repeat;
         background-size: cover;
         background-position: center center;
@@ -665,14 +664,15 @@ p, label, textarea{
         margin-bottom: 50px;
     }
     .vy-hero-inner{
-        height: 500px;
+        display: table;
+        padding: 65px 0;
     }
     .vy-hero-inner-content{
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.85);
         display: block;
-        padding: 40px 40px 40px;
+        padding: 15px 20px 0px;
     }
     .vy-hero-inner-content .row{
         position: relative;
@@ -685,7 +685,7 @@ p, label, textarea{
         width: 100%;
         height: 100%;
         display: table;
-        border-right: 1px solid var(--eletricindigo); 
+        border-right: none; 
 
     }
     .vy-project-description{
@@ -850,6 +850,9 @@ p, label, textarea{
     }
 }
 @media screen and (min-width: 576px){
+    .vy-hero-inner-content{
+        padding: 40px 40px 40px;
+    }
     .vy-portfolio-nav{
         bottom: -53em;
     }
@@ -1069,6 +1072,9 @@ p, label, textarea{
     }
     .vy-project-description{
         margin-top: 0;
+    }
+    .vy-project-stats {
+        border-right: 1px solid var(--eletricindigo); 
     }
 }
 @media screen and (min-width: 1200px){
