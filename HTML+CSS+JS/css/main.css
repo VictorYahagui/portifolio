@@ -686,7 +686,9 @@ p, label, textarea{
         height: 100%;
         display: table;
         border-right: none; 
-
+    }
+    .vy-project-stats button{
+        margin: 0 auto;
     }
     .vy-project-description{
         width: 100%;
@@ -718,7 +720,7 @@ p, label, textarea{
         top: -350px;
     }
     .vy-gallery-frame-container{
-        width: 350px;
+        width: 70%;
         display: none;
         position: fixed;
         top: 50px;
@@ -729,7 +731,7 @@ p, label, textarea{
     }
     .vy-gallery-frame-container .vy-next-prev{
         width: 175px;
-        margin: 60px auto;
+        margin: 45px auto 0 auto;
     }
     .vy-gallery-frame-inner{
        width: 100%;
@@ -795,14 +797,14 @@ p, label, textarea{
         z-index: 1300;
     }
     .vy-gallery-frame-image{  
-        width: 87%;
-        max-width: 87%;
+        width: 90%;
+        max-width: 90%;
         margin: 0 auto;
         display: block;
         z-index: 1200;
-        border-radius: 30px;
+        border-radius: 20px;
         position: relative;
-        top: 20px;
+        top: 6px;
     }
     /* Ultilitarias */
     .vy-title-xlarge {
@@ -812,7 +814,9 @@ p, label, textarea{
     .vy-full-height{
         height: auto;
     }
-
+    .vy-text-center-mob{
+        text-align: center;
+    }
 }
 @media screen and (min-width: 320px){
     .vy-portfolio-nav{
@@ -822,6 +826,15 @@ p, label, textarea{
 @media screen and (min-width: 350px){
     .vy-portfolio-nav{
         bottom: -52em;
+    }
+    .vy-gallery-frame-container{
+        width: 250px;
+    }
+    .vy-gallery-frame-image{  
+        width: 90%;
+        max-width: 90%;
+        border-radius: 20px;
+        top: 6px;
     }
 }
 @media screen and (min-width: 400px){
@@ -891,6 +904,12 @@ p, label, textarea{
     }
     .vy-portfolio-nav{
         bottom: -61em;
+    }
+    .vy-text-center-mob{
+        text-align: left;
+    }
+    .vy-text-left{
+        text-align: left;
     }
 }
 @media screen and (min-width: 800px){
@@ -1076,6 +1095,16 @@ p, label, textarea{
     .vy-project-stats {
         border-right: 1px solid var(--eletricindigo); 
     }
+    .vy-project-stats button{
+        margin: 0;
+    }
+    .vy-gallery-frame-container{
+        width: 290px;
+    }
+    .vy-gallery-frame-image{  
+        top: 10px;
+    }
+
 }
 @media screen and (min-width: 1200px){
     .vy-modal{
@@ -1119,6 +1148,9 @@ p, label, textarea{
     .vy-portfolio-item-thumb img{
         left: 60px;
     }
+    .vy-gallery-frame-container{
+        width: 290px;
+    }
     /*ultilit*/
 
     .vy-full-height{
@@ -1130,7 +1162,9 @@ p, label, textarea{
 }
 
 @media screen and (min-width: 1600px){
-    
+    .vy-gallery-frame-container{
+        width: 400px;
+    }
 }
 /*BTN*/
 
