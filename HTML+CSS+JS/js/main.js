@@ -55,13 +55,16 @@ for(let i = 0; i < toggleModal.length; i++){
 
     });
 }
-
-// Animate scroll waypoints 
-
+// Anime topBar
+const triggerTopBar = document.querySelector('.vy-trigger-topbar');
+const topbar = document.querySelector('.vy-topbar');
+const logo = document.querySelector('.vy-logo');
 var waypoint = new Waypoint({
-    element: document.querySelector('.vy-scrolling'),
-    handler: function() {
-    document.querySelector('.vy-scrolling').classList.toggle('vy-fade-out-scroll')
+    element: triggerTopBar,
+    handler: function () {
+        topbar.classList.toggle('vy-topbar-bg');
+        logo.classList.toggle('vy-logo-shorten');
+        logo.classList.toggle('vy-logo-big')
     },
-    offset: '80%'
+    offset: '0'
 });
