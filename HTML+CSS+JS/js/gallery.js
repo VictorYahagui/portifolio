@@ -1,7 +1,7 @@
 const overlay = document.querySelector('.vy-overlay');
 const frameImage = document.querySelector('.vy-gallery-frame-image');
 const frameContainer = document.querySelector('.vy-gallery-frame-container');
-const galleryImages = document.querySelectorAll('.vy-thumb-img');
+const galleryImages = document.querySelectorAll('.vy-thumb-box');
 const closeGallery = document.querySelectorAll('.vy-toggle-gallery');
 const btnNext = document.querySelector('.vy-item-next');
 const btnPrev = document.querySelector('.vy-item-prev');
@@ -45,8 +45,8 @@ const skeletonAnim = function (img) {
 const getImageSrc = function () {
     for (let i = 0; i < galleryImages.length; i++) {
         galleryImages[i].addEventListener('click', function () {
-            const imageSrc = this.getAttribute('data-src');
-            const itemNum = this.getAttribute('data-item');
+            const imageSrc = this.querySelector('img').getAttribute('data-src');
+            const itemNum = this.querySelector('img').getAttribute('data-item');
             skeletonLoading.style.display = 'flex';
             frameImage.setAttribute('src', imageSrc);
             frameImage.setAttribute('data-index', itemNum);
@@ -72,10 +72,10 @@ const nextItem = function () {
     const currentItemNum = frameImage.getAttribute('data-index');
     const nextItemNum = parseInt(currentItemNum) + 1;
     for (let i = 0; i < galleryImages.length; i++) {
-        const item = parseInt(galleryImages[i].getAttribute('data-item'));
+        const item = parseInt(galleryImages[i].querySelector('img').getAttribute('data-item'));
         if (nextItemNum === item) {
-            let nextSrc = galleryImages[i].getAttribute('data-src');
-            let nextIndex = galleryImages[i].getAttribute('data-item');
+            let nextSrc = galleryImages[i].querySelector('img').getAttribute('data-src');
+            let nextIndex = galleryImages[i].querySelector('img').getAttribute('data-item');
 
             skeletonLoading.style.display = 'flex';
             frameImage.setAttribute('src', nextSrc);
@@ -92,10 +92,10 @@ const prevItem = function () {
     const currentItemNum = frameImage.getAttribute('data-index');
     const prevItemNum = parseInt(currentItemNum) - 1;
     for (let i = 0; i < galleryImages.length; i++) {
-        const item = parseInt(galleryImages[i].getAttribute('data-item'));
+        const item = parseInt(galleryImages[i].querySelector('img').getAttribute('data-item'));
         if (prevItemNum === item) {
-            let prevSrc = galleryImages[i].getAttribute('data-src');
-            let prevIndex = galleryImages[i].getAttribute('data-item');
+            let prevSrc = galleryImages[i].querySelector('img').getAttribute('data-src');
+            let prevIndex = galleryImages[i].querySelector('img').getAttribute('data-item');
             skeletonLoading.style.display = 'flex';
             frameImage.setAttribute('src', prevSrc);
             frameImage.setAttribute('data-index', prevIndex);
