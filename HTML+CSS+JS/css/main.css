@@ -304,7 +304,7 @@ textarea {
         top: 0;
         left: 0;
         background-color: rgba(116, 36, 229, 0);
-        animation: bg-fade 1s ease forwards;
+        animation: bg-fade .4s ease forwards;
     }
 
     .vy-modal {
@@ -441,7 +441,7 @@ textarea {
         top: 0;
         z-index: 1200;
         padding: 100px 30px 30px;
-        transition: all 1s ease-out;
+        transition: all .4s ease-out;
     }
 
     .vy-menu-is-open {
@@ -794,7 +794,7 @@ textarea {
         text-align: center;
     }
 
-    .vy-slider-list .vy-portfolio-item-info button {
+    .vy-slider-list .vy-portfolio-item-info .vy-btn {
         margin: 0 auto;
     }
 
@@ -812,12 +812,12 @@ textarea {
         position: relative;
     }
 
-    .vy-slider-list .vy-portfolio-item-thumb>button {
+    .vy-slider-list .vy-portfolio-item-thumb > .vy-btn {
         margin: 17px auto 0 auto;
         float: none;
     }
 
-    .vy-porftolio-list .vy-portfolio-item-thumb>button {
+    .vy-porftolio-list .vy-portfolio-item-thumb > .vy-btn {
         margin: 17px auto 0 auto;
         float: none;
     }
@@ -869,8 +869,8 @@ textarea {
         width: 100%;
     }
 
-    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) .vy-portfolio-item-info button,
-    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-info button {
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) .vy-portfolio-item-info .vy-btn,
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-info .vy-btn {
         float: none;
         margin: 0 auto;
     }
@@ -935,7 +935,7 @@ textarea {
         border-right: none;
     }
 
-    .vy-project-stats button {
+    .vy-project-stats .vy-btn {
         margin: 0 auto;
     }
 
@@ -1363,7 +1363,7 @@ textarea {
         left: -60px;
     }
 
-    .vy-slider-list .vy-portfolio-item-thumb>button {
+    .vy-slider-list .vy-portfolio-item-thumb>.vy-btn {
         margin: 17px 2.7vh 0 auto;
         float: right;
     }
@@ -1396,7 +1396,7 @@ textarea {
         text-align: left;
     }
 
-    .vy-slider-list .vy-portfolio-item-info button {
+    .vy-slider-list .vy-portfolio-item-info .vy-btn {
         margin: 0;
     }
 
@@ -1428,11 +1428,11 @@ textarea {
         text-align: right;
     }
 
-    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) .vy-portfolio-item-info button {
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) .vy-portfolio-item-info .vy-btn {
         float: right;
     }
 
-    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) .vy-portfolio-item-thumb button {
+    .vy-porftolio-list .vy-portfolio-item:nth-child(odd) .vy-portfolio-item-thumb .vy-btn {
         float: right;
         margin-right: 59px;
     }
@@ -1449,11 +1449,11 @@ textarea {
         width: 90%;
     }
 
-    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-info button {
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-info .vy-btn {
         float: left;
     }
 
-    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-thumb button {
+    .vy-porftolio-list .vy-portfolio-item:nth-child(even) .vy-portfolio-item-thumb .vy-btn {
         float: left;
         margin-left: 59px;
     }
@@ -1475,7 +1475,7 @@ textarea {
         border-right: 1px solid var(--eletricindigo);
     }
 
-    .vy-project-stats button {
+    .vy-project-stats .vy-btn {
         margin: 0;
     }
 
@@ -1521,7 +1521,7 @@ textarea {
         left: -60px;
     }
 
-    .vy-slider-list .vy-portfolio-item-thumb>button {
+    .vy-slider-list .vy-portfolio-item-thumb > .vy-btn {
         margin-right: 59px;
     }
 
